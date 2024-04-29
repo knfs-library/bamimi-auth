@@ -13,6 +13,8 @@ This is a package that helps you auth files without having to re-import them in 
 ---
 
 ## Install
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth?ref=badge_shield)
+
 ```bash
 npm i @knfs-tech/bamimi-auth
 #or
@@ -144,3 +146,5 @@ const oneTimePassword = await auth.generateOTP(secretKey);
 ## License
 
 Bamimi is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth?ref=badge_large)

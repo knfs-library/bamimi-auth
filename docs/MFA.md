@@ -109,5 +109,3 @@ Generates a QR code for MFA setup using the provided URL.
 
 - Ensure that you securely store and manage the generated secret keys.
 - Implement additional security measures as per your application's requirements.
-```
-```

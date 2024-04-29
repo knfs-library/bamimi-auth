@@ -120,5 +120,3 @@ Closes the connection if using Redis as the storage.
 - Ensure that the required configuration options are provided before initializing the JWT instance.
 - Handle errors appropriately when using the JWT management module.
 - Implement additional security measures as per your application's requirements.
-```
-```

@@ -102,7 +102,8 @@ describe('JWT class', () => {
 				secretKey: "",
 				options: {
 					expiresIn: '1m'
-				}
+				},
+				use: true
 			}
 		}
 

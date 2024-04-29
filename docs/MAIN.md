@@ -122,7 +122,118 @@ const secretKey = "user_secret_key_here"; // Secret key for MFA
 const oneTimePassword = await auth.generateOTP(secretKey);
 ```
 
+### Function Details
+
+#### `constructor(config = null)`
+
+- **Description:** Initializes the `Auth` instance with the provided configuration. If no configuration is provided, it defaults to `configType`.
+- **Parameters:**
+  - `config`: (Optional) Configuration object for the authentication system.
+- **Returns:** None.
+
+---
+
+#### `static init(config = null)`
+
+- **Description:** Initializes the `Auth` instance with the provided configuration and returns the instance.
+- **Parameters:**
+  - `config`: (Optional) Configuration object for the authentication system.
+- **Returns:** An instance of the `Auth` class.
+
+---
+
+#### `static getAuth()`
+
+- **Description:** Returns the current instance of the `Auth` class if it has been initialized.
+- **Parameters:** None.
+- **Returns:** An instance of the `Auth` class.
+
+---
+
+#### `getBasicAuth()`
+
+- **Description:** Returns an instance of the Basic Authentication class.
+- **Parameters:** None.
+- **Returns:** An instance of the Basic Authentication class.
+
+---
+
+#### `getPasswordBasedAuth()`
+
+- **Description:** Returns an instance of the Password-Based Authentication class.
+- **Parameters:** None.
+- **Returns:** An instance of the Password-Based Authentication class.
+
+---
+
+#### `getJWT()`
+
+- **Description:** Returns an instance of the JSON Web Token (JWT) class.
+- **Parameters:** None.
+- **Returns:** An instance of the JSON Web Token (JWT) class.
+
+---
+
+#### `getMFA()`
+
+- **Description:** Returns an instance of the Multi-Factor Authentication (MFA) class.
+- **Parameters:** None.
+- **Returns:** An instance of the Multi-Factor Authentication (MFA) class.
+
+---
+
+#### `async verifyWithPassword(originalData, comparisonData, returnType = 'bool')`
+
+- **Description:** Verifies the password provided by comparing it with the hashed password stored in the database. Optionally, it can return JWT tokens if specified.
+- **Parameters:**
+  - `originalData`: Object containing the original user data.
+  - `comparisonData`: Object containing the comparison data, typically retrieved from the database.
+  - `returnType`: (Optional) Specifies the return type. Default is `'bool'`. Can be `'bool'` or `'token'`.
+- **Returns:** If `returnType` is `'bool'`, returns a boolean indicating whether the password is valid. If `returnType` is `'token'`, returns an object containing JWT tokens.
+
+---
+
+#### `async hashPassword(password, saltRounds = 10)`
+
+- **Description:** Hashes the provided password using bcrypt with the specified number of salt rounds.
+- **Parameters:**
+  - `password`: Plain text password to be hashed.
+  - `saltRounds`: (Optional) Number of salt rounds for bcrypt hashing. Default is `10`.
+- **Returns:** A promise that resolves to the hashed password.
+
+---
+
+#### `async verifyWithBasicAuth(originalData, authorizationHeader)`
+
+- **Description:** Verifies the user's credentials provided in the Basic Authentication header.
+- **Parameters:**
+  - `originalData`: Object containing the original user data.
+  - `authorizationHeader`: Authorization header containing Basic Authentication credentials.
+- **Returns:** A promise that resolves to a boolean indicating whether the authentication is successful.
+
+---
+
+#### `async generateMFA(originalData, returnType = 'secret')`
+
+- **Description:** Generates Multi-Factor Authentication (MFA) configurations such as secret key, URL for QR code, or QR code image data.
+- **Parameters:**
+  - `originalData`: Object containing the original user data.
+  - `returnType`: (Optional) Specifies the return type. Default is `'secret'`. Can be `'secret'`, `'url'`, or `'qr'`.
+- **Returns:** Depending on the `returnType`, returns either the secret key, URL for QR code, or QR code image data.
+
+---
+
+#### `async generateOTP(secret)`
+
+- **Description:** Generates a one-time password (OTP) using the provided secret key.
+- **Parameters:**
+  - `secret`: Secret key for generating the OTP.
+- **Returns:** A promise that resolves to the generated one-time password.
+
+---
+
+
+
 ## Conclusion
 
 This guide demonstrated how to use the authentication system in a Node.js application with a specific example. Make sure to handle errors appropriately and customize the code according to your application's requirements.
-```

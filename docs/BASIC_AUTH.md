@@ -56,4 +56,3 @@
 - Ensure that the Authorization header is properly formatted and contains valid credentials.
 - Always hash passwords before storing them in the database and compare hashed passwords for authentication.
 - Use HTTPS to encrypt communication between the client and server to protect sensitive information, including credentials.
-```

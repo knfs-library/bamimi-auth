@@ -13,7 +13,7 @@
 	<a href="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/?branch=master"alt="scrutinizer">
 		<img src="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality" />
 	</a>
-	<a href="https://github.com/knfs-jsc/bamimi-auth/actions/workflows/unit-test.yml"alt="scrutinizer">
+	<a href="https://github.com/knfs-jsc/bamimi-auth/actions/workflows/unit-test.yml" alt="github">
 		<img src="https://github.com/knfs-jsc/bamimi-auth/actions/workflows/unit-test.yml/badge.svg" alt="Github " />
 	</a>
 </p>

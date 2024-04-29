@@ -1,0 +1,44 @@
+{
+  "name": "@knfs-tech/bamimi-auth",
+  "version": "1.0.0",
+  "description": "Auth module",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "scripts": {
+    "test": "jest --runInBand --force-exit --detectOpenHandles"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knfs-jsc/bamimi-auth.git"
+  },
+  "keywords": [
+    "auth",
+    "bamimi"
+  ],
+  "author": "Kent Phung",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "node-cache": "^5.1.2",
+    "otplib": "^12.0.1",
+    "qrcode": "^1.5.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "^29.4.3",
+    "sinon": "^17.0.1",
+    "supertest": "^6.3.3"
+  },
+  "bugs": {
+    "url": "https://github.com/knfs-jsc/bamimi-auth/issues"
+  },
+  "homepage": "https://github.com/knfs-jsc/bamimi-auth#readme"
+}

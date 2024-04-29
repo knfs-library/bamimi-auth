@@ -1,13 +1,21 @@
 <p align="center">
   <img width="250" src="https://github.com/knfs-jsc/bamimi-auth/blob/master/docs/images/logo-background.png?raw=true">
   <br>
-	<a href="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=license" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=license"/></a>
-	<a href="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=security" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=security"/></a>
-	<a href="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/build-status/master"alt="scrutinizer">
-	<img src="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/badges/build.png?b=master" alt="Build Status" /></a>
+	<a href="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=license" alt="FOSSA Status">
+		<img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=license"/>
+	</a>
+	<a href="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=security" alt="FOSSA Status">
+		<img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknfs-jsc%2Fbamimi-auth.svg?type=shield&issueType=security"/>
+	</a>
+	<a href="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-auth/badges/quality-score.png?b=master"alt="scrutinizer">
+		<img src="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-auth/badges/quality-score.png?b=master" alt="Build Status" />
+	</a>
 	<a href="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/?branch=master"alt="scrutinizer">
-	<img src="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality" /></a>
-	<a href="https://github.com/knfs-jsc/bamimi-autoload/actions"alt="scrutinizer">
+		<img src="https://scrutinizer-ci.com/g/knfs-jsc/bamimi-autoload/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality" />
+	</a>
+	<a href="https://github.com/knfs-jsc/bamimi-auth/actions/workflows/unit-test.yml"alt="scrutinizer">
+		<img src="https://github.com/knfs-jsc/bamimi-auth/actions/workflows/unit-test.yml/badge.svg" alt="Github " />
+	</a>
 </p>
 
 <h1> <span style="color:#013C4D;">About</span> <span style="color:#2B7F84;">Bamimi auth</span></h1>

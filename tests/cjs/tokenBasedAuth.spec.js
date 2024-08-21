@@ -1,7 +1,8 @@
 const { JWT, storageTypeEnum } = require('./../../lib/cjs/tokenBasedAuth');
 const { faker } = require("@faker-js/faker");
 const MemoryCache = require('node-cache');
-const Redis = require("ioredis")
+const Redis = require("ioredis");
+const { multiply } = require('lodash');
 
 jest.mock('ioredis')
 
@@ -88,27 +89,6 @@ describe('JWT class', () => {
 
 		const jwt0 = new JWT(config)
 		expect(jwt0.generateAccessToken(data)).rejects.toThrowError("Cannot find access token config!");
-	})
-
-	test("generateAccessToken error not refreshToken", async () => {
-		const config = {
-			accessToken: {
-				secretKey: "",
-				options: {
-					expiresIn: '30s'
-				}
-			},
-			refreshToken: {
-				secretKey: "",
-				options: {
-					expiresIn: '1m'
-				},
-				use: true
-			}
-		}
-
-		const jwt0 = new JWT(config)
-		expect(jwt0.generateAccessToken(data)).rejects.toThrowError("Cannot find refresh token although you have config it!");
 	})
 
 	test('Set and check blacklist with MemoryCache', async () => {

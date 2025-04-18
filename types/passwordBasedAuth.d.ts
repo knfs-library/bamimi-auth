@@ -1,5 +1,3 @@
-const bcrypt = require("bcrypt");
-
 /**
  * Checks if the provided comparison data matches the original data using bcrypt.
  *
@@ -10,18 +8,13 @@ const bcrypt = require("bcrypt");
  * @param {string} fields.pinField The name of the field containing the password hash (e.g., 'password').
  * @returns {Promise<boolean>} Returns true if authentication passes.
  */
-const check = async (originalData, comparisonData, { idFields = ['username'], pinField = 'password' }) => {
-	if (!idFields.some((id) => originalData[id] === comparisonData.id)) {
-		return false;
-	}
-
-	if (!comparisonData[pinField]) {
-		throw new Error(`Missing "${pinField}" in comparisonData`);
-	}
-
-	return await bcrypt.compare(comparisonData[pinField], originalData[pinField]);
-};
-
+export function check(originalData: any, comparisonData: {
+    id: string;
+    [key: string]: any;
+}, { idFields, pinField }: {
+    idFields: Array<string>;
+    pinField: string;
+}): Promise<boolean>;
 /**
  * Hashes a PIN (password) using bcrypt.
  *
@@ -29,11 +22,4 @@ const check = async (originalData, comparisonData, { idFields = ['username'], pi
  * @param {number} [saltRounds=10]
  * @returns {Promise<string>}
  */
-const hashPin = async (pin, saltRounds = 10) => {
-	return await bcrypt.hash(pin, saltRounds);
-};
-
-module.exports = {
-	check,
-	hashPin
-};
+export function hashPin(pin: string, saltRounds?: number): Promise<string>;

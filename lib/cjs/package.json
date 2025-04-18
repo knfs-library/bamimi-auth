@@ -1,4 +1,7 @@
 {
   "name": "@knfs-tech/bamimi-auth",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/lodash": "^4.17.16"
+  }
 }

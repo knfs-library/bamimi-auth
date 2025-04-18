@@ -10,7 +10,7 @@ describe('Auth', () => {
 		email: faker.internet.email()
 	}
 	afterEach(() => {
-		sinon.restore(); // Khôi phục tất cả các mock sau mỗi test case
+		sinon.restore();
 	});
 
 	describe('#verifyWithPassword', () => {
